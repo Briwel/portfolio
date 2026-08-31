@@ -15,8 +15,19 @@
 html,
 body {
 	overflow-x: hidden;
-	background: #030014;
 	scroll-behavior: smooth !important;
+}
+
+/* Light mode defaults (when .dark class is NOT present) */
+body {
+	background-color: #ffffff; /* Example light mode background */
+	color: #000000;
+}
+
+/* Dark mode defaults (when .dark class IS present) */
+html.dark body {
+	background-color: #030014;
+	color: #ffffff;
 }
 
 

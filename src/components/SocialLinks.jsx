@@ -13,8 +13,8 @@ import PresenceWidget from "./PresenceWidget";
 const socialLinks = [
   {
     name: "LinkedIn",
-    displayName: "Let's Connect",
-    subText: "on LinkedIn",
+    displayName: "Connectons-nous",
+    subText: "sur LinkedIn",
     icon: Linkedin,
     url: "https://www.linkedin.com/in/briwel-dodaho-5a6230423",
     color: "#0A66C2",
@@ -52,7 +52,7 @@ const SocialLinks = () => {
         data-aos="fade-down" 
       >
         <span className="inline-block w-8 h-1 bg-indigo-500 rounded-full"></span>
-        Connect With Me
+        Restons en contact
       </h3>
 
       <div className="flex flex-col gap-4">
