@@ -182,8 +182,8 @@ const AboutPage = () => {
       <Header />
 
       <div className="w-full mx-auto pt-8 sm:pt-12 relative">
-        <div className="flex flex-col-reverse lg:grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
-          <div className="space-y-6 text-center lg:text-left">
+        <div className="flex flex-col gap-10 lg:gap-16 items-center">
+          <div className="space-y-6 text-center lg:text-left w-full">
             <h2 
               className="text-3xl sm:text-4xl lg:text-5xl font-bold"
               data-aos="fade-right"
@@ -253,8 +253,6 @@ const AboutPage = () => {
               </a>
             </div>
           </div>
-
-          <ProfileImage />
         </div>
 
         <a href="#Portofolio">
