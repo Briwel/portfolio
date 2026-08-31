@@ -65,8 +65,8 @@ const PAUSE_DURATION = 2000;
 const WORDS = ["Développeur Full-Stack", "Passionné de Tech"];
 const TECH_STACK = ["React", "Next.js", "NestJS", "Flutter", "Tailwind"];
 const SOCIAL_LINKS = [
-  { icon: Github, link: "https://github.com/BriwelDodaho", label: "Profil GitHub" },
-  { icon: Linkedin, link: "https://www.linkedin.com/in/briwel-dodaho/", label: "Profil LinkedIn" },
+  { icon: Github, link: "https://github.com/Briwel", label: "Profil GitHub" },
+  { icon: Linkedin, link: "https://www.linkedin.com/in/briwel-dodaho-5a6230423", label: "Profil LinkedIn" },
   { icon: Mail, link: "mailto:dodahobriwel@gmail.com", label: "Email" }
 ];
 
@@ -142,8 +142,8 @@ const Home = () => {
             "jobTitle": "Développeur Full-Stack",
             "url": "https://briweldodaho.com",
             "sameAs": [
-              "https://github.com/BriwelDodaho",
-              "https://www.linkedin.com/in/briwel-dodaho/"
+            "https://github.com/Briwel",
+            "https://www.linkedin.com/in/briwel-dodaho-5a6230423"
             ]
           }
         `}</script>

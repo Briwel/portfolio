@@ -42,6 +42,11 @@ const ProfileImage = memo(() => (
         <div className="absolute inset-0 bg-gradient-to-t from-blue-600 via-cyan-500 to-teal-400 rounded-full blur-2xl animate-float opacity-50" />
       </div>
 
+      <img 
+        src="/photo.jpg" 
+        alt="Briwel DODAHO" 
+        className="relative z-10 w-64 h-64 rounded-full object-cover border-4 border-white/10 group-hover:scale-105 transition-transform duration-300"
+      />
     </div>
   </div>
 ));

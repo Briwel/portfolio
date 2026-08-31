@@ -220,7 +220,7 @@ const ContactPage = () => {
             </form>
 
             <div className="mt-6">
-                <a href="/Briwel_DODAHO.pdf" download className="w-full flex items-center justify-center gap-2 py-3 bg-white/10 rounded-xl text-white font-semibold transition-all hover:bg-white/20">
+                <a href="/public/Biwel_DODAHO.pdf" download className="w-full flex items-center justify-center gap-2 py-3 bg-white/10 rounded-xl text-white font-semibold transition-all hover:bg-white/20">
                     <FileText className="w-5 h-5" /> Télécharger mon CV
                 </a>
             </div>
@@ -230,9 +230,6 @@ const ContactPage = () => {
             </div>
           </div>
 
-          <div className="bg-white/5 backdrop-blur-xl rounded-3xl p-3 py-3 md:p-10 md:py-8 shadow-2xl transform transition-all duration-500 hover:shadow-[#6366f1]/10">
-
-          </div>
         </div>
       </div>
     </div>
