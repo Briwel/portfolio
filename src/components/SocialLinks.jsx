@@ -48,7 +48,7 @@ const SocialLinks = () => {
   return (
     <div className="w-full bg-gradient-to-br from-white/10 to-white/5 rounded-2xl p-6 py-8 backdrop-blur-xl">
       <h3
-        className="text-xl font-semibold text-white mb-6 flex items-center gap-2"
+        className="text-xl font-semibold text-gray-900 dark:text-white mb-6 flex items-center gap-2"
         data-aos="fade-down" 
       >
         <span className="inline-block w-8 h-1 bg-indigo-500 rounded-full"></span>
@@ -92,10 +92,10 @@ const SocialLinks = () => {
 
             {/* Text Container */}
             <div className="flex flex-col">
-              <span className="text-lg font-bold pt-[0.2rem] text-gray-200 tracking-tight leading-none group-hover:text-white transition-colors duration-300">
+              <span className="text-lg font-bold pt-[0.2rem] text-gray-800 dark:text-gray-200 tracking-tight leading-none group-hover:text-gray-900 dark:text-white transition-colors duration-300">
                 {linkedIn.displayName}
               </span>
-              <span className="text-sm text-gray-400 group-hover:text-gray-300 transition-colors duration-300">
+              <span className="text-sm text-gray-600 dark:text-gray-400 group-hover:text-gray-300 transition-colors duration-300">
                 {linkedIn.subText}
               </span>
             </div>
@@ -103,7 +103,7 @@ const SocialLinks = () => {
 
           {/* External Link */}
           <ExternalLink
-            className="relative w-5 h-5 text-gray-500 group-hover:text-white
+            className="relative w-5 h-5 text-gray-500 group-hover:text-gray-900 dark:text-white
                        opacity-0 group-hover:opacity-100 transition-all duration-300
                        transform group-hover:translate-x-0 -translate-x-1"
           />
@@ -152,16 +152,16 @@ const SocialLinks = () => {
 
               {/* Text Container */}
               <div className="flex flex-col min-w-0">
-                <span className="text-sm font-bold text-gray-200 group-hover:text-white transition-colors duration-300">
+                <span className="text-sm font-bold text-gray-800 dark:text-gray-200 group-hover:text-gray-900 dark:text-white transition-colors duration-300">
                   {link.displayName}
                 </span>
-                <span className="text-xs text-gray-400 truncate group-hover:text-gray-300 transition-colors duration-300">
+                <span className="text-xs text-gray-600 dark:text-gray-400 truncate group-hover:text-gray-300 transition-colors duration-300">
                   {link.subText}
                 </span>
               </div>
 
               <ExternalLink
-                className="w-4 h-4 text-gray-500 group-hover:text-white ml-auto
+                className="w-4 h-4 text-gray-500 group-hover:text-gray-900 dark:text-white ml-auto
                                        opacity-0 group-hover:opacity-100 transition-all duration-300
                                        transform group-hover:translate-x-0 -translate-x-2"
               />
@@ -211,16 +211,16 @@ const SocialLinks = () => {
 
               {/* Text Container */}
               <div className="flex flex-col min-w-0">
-                <span className="text-sm font-bold text-gray-200 group-hover:text-white transition-colors duration-300">
+                <span className="text-sm font-bold text-gray-800 dark:text-gray-200 group-hover:text-gray-900 dark:text-white transition-colors duration-300">
                   {link.displayName}
                 </span>
-                <span className="text-xs text-gray-400 truncate group-hover:text-gray-300 transition-colors duration-300">
+                <span className="text-xs text-gray-600 dark:text-gray-400 truncate group-hover:text-gray-300 transition-colors duration-300">
                   {link.subText}
                 </span>
               </div>
 
               <ExternalLink
-                className="w-4 h-4 text-gray-500 group-hover:text-white ml-auto
+                className="w-4 h-4 text-gray-500 group-hover:text-gray-900 dark:text-white ml-auto
                                        opacity-0 group-hover:opacity-100 transition-all duration-300
                                        transform group-hover:translate-x-0 -translate-x-2"
               />

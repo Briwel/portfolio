@@ -7,7 +7,7 @@ const ProjectCardModal = ({ title, description, link }) => {
   return (
     <>
       <button
-        className="inline-flex items-center space-x-1 px-3 py-1.5 rounded-lg bg-white/5 hover:bg-white/10 text-white/90 transition-colors duration-200"
+        className="inline-flex items-center space-x-1 px-3 py-1.5 rounded-lg bg-white/5 hover:bg-white/10 text-gray-900 dark:text-white/90 transition-colors duration-200"
         onClick={() => setIsOpen(true)}
       >
         <span className="text-sm">Details</span>
@@ -20,7 +20,7 @@ const ProjectCardModal = ({ title, description, link }) => {
           onClick={() => setIsOpen(false)}
         >
           <div
-            className="relative w-full max-w-md rounded-lg bg-gray-900 p-6 text-white shadow-lg animate-slide-up sm:p-8"
+            className="relative w-full max-w-md rounded-lg bg-gray-900 p-6 text-gray-900 dark:text-white shadow-lg animate-slide-up sm:p-8"
             onClick={(e) => e.stopPropagation()}
           >
             <button
@@ -30,7 +30,7 @@ const ProjectCardModal = ({ title, description, link }) => {
               <Eye className="h-5 w-5" />
             </button>
             <h2 className="mb-4 text-2xl font-bold">{title}</h2>
-            <p className="mb-6 text-gray-400">{description}</p>
+            <p className="mb-6 text-gray-600 dark:text-gray-400">{description}</p>
             <div className="flex justify-end space-x-4">
               <a
                 href={link}

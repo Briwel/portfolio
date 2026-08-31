@@ -51,7 +51,7 @@ const FeatureItem = ({ feature }) => {
         <div className="absolute -inset-1 bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-full blur group-hover:opacity-100 opacity-0 transition-opacity duration-300" />
         <div className="relative w-1.5 h-1.5 md:w-2 md:h-2 rounded-full bg-gradient-to-r from-blue-400 to-purple-400 group-hover:scale-125 transition-transform duration-300" />
       </div>
-      <span className="text-sm md:text-base text-gray-300 group-hover:text-white transition-colors">
+      <span className="text-sm md:text-base text-gray-300 group-hover:text-gray-900 dark:text-white transition-colors">
         {feature}
       </span>
     </li>
@@ -76,7 +76,7 @@ const ProjectStats = ({ project }) => {
           <div className="text-lg md:text-xl font-semibold text-blue-200">
             {techStackCount}
           </div>
-          <div className="text-[10px] md:text-xs text-gray-400">
+          <div className="text-[10px] md:text-xs text-gray-600 dark:text-gray-400">
             Total Technologies
           </div>
         </div>
@@ -93,7 +93,7 @@ const ProjectStats = ({ project }) => {
           <div className="text-lg md:text-xl font-semibold text-purple-200">
             {featuresCount}
           </div>
-          <div className="text-[10px] md:text-xs text-gray-400">
+          <div className="text-[10px] md:text-xs text-gray-600 dark:text-gray-400">
             Fonctionnalités Principales
           </div>
         </div>
@@ -148,7 +148,7 @@ const ProjectDetails = () => {
       <div className="min-h-screen bg-[#030014] flex items-center justify-center">
         <div className="text-center space-y-6 animate-fadeIn">
           <div className="w-16 h-16 md:w-24 md:h-24 mx-auto border-4 border-blue-500/30 border-t-blue-500 rounded-full animate-spin" />
-          <h2 className="text-xl md:text-3xl font-bold text-white">
+          <h2 className="text-xl md:text-3xl font-bold text-gray-900 dark:text-white">
             Loading Project...
           </h2>
         </div>
@@ -214,15 +214,15 @@ const ProjectDetails = () => {
             <div className="flex items-center space-x-2 md:space-x-4 mb-8 md:mb-12 animate-fadeIn">
               <button
                 onClick={() => navigate(-1)}
-                className="group inline-flex items-center space-x-1.5 md:space-x-2 px-3 md:px-5 py-2 md:py-2.5 bg-white/5 backdrop-blur-xl rounded-xl text-white/90 hover:bg-white/10 transition-all duration-300 border border-white/10 hover:border-white/20 text-sm md:text-base"
+                className="group inline-flex items-center space-x-1.5 md:space-x-2 px-3 md:px-5 py-2 md:py-2.5 bg-white/5 backdrop-blur-xl rounded-xl text-gray-900 dark:text-white/90 hover:bg-white/10 transition-all duration-300 border border-white/10 hover:border-white/20 text-sm md:text-base"
               >
                 <ArrowLeft className="w-4 h-4 md:w-5 md:h-5 group-hover:-translate-x-1 transition-transform" />
                 <span>Back</span>
               </button>
-              <div className="flex items-center space-x-1 md:space-x-2 text-sm md:text-base text-white/50">
+              <div className="flex items-center space-x-1 md:space-x-2 text-sm md:text-base text-gray-900 dark:text-white/50">
                 <span>Projects</span>
                 <ChevronRight className="w-3 h-3 md:w-4 md:h-4" />
-                <span className="text-white/90 truncate">{project.Title}</span>
+                <span className="text-gray-900 dark:text-white/90 truncate">{project.Title}</span>
               </div>
             </div>
 
@@ -274,7 +274,7 @@ const ProjectDetails = () => {
                 </div>
 
                 <div className="space-y-4 md:space-y-6">
-                  <h3 className="text-lg md:text-xl font-semibold text-white/90 mt-[3rem] md:mt-0 flex items-center gap-2 md:gap-3">
+                  <h3 className="text-lg md:text-xl font-semibold text-gray-900 dark:text-white/90 mt-[3rem] md:mt-0 flex items-center gap-2 md:gap-3">
                     <Code2 className="w-4 h-4 md:w-5 md:h-5 text-blue-400" />
                     Technologies Used
                   </h3>
@@ -285,7 +285,7 @@ const ProjectDetails = () => {
                       ))}
                     </div>
                   ) : (
-                    <p className="text-sm md:text-base text-gray-400 opacity-50">
+                    <p className="text-sm md:text-base text-gray-600 dark:text-gray-400 opacity-50">
                       No technologies added.
                     </p>
                   )}
@@ -305,7 +305,7 @@ const ProjectDetails = () => {
                 </div>
 
                 <div className="bg-white/[0.02] backdrop-blur-xl rounded-2xl p-8 border border-white/10 space-y-6 hover:border-white/20 transition-colors duration-300 group">
-                  <h3 className="text-xl font-semibold text-white/90 flex items-center gap-3">
+                  <h3 className="text-xl font-semibold text-gray-900 dark:text-white/90 flex items-center gap-3">
                     <Star className="w-5 h-5 text-yellow-400 group-hover:rotate-[20deg] transition-transform duration-300" />
                     Key Features
                   </h3>
@@ -316,7 +316,7 @@ const ProjectDetails = () => {
                       ))}
                     </ul>
                   ) : (
-                    <p className="text-gray-400 opacity-50">
+                    <p className="text-gray-600 dark:text-gray-400 opacity-50">
                       No features added.
                     </p>
                   )}

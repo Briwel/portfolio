@@ -42,7 +42,7 @@ export default function NotFoundPage() {
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
           <button
             onClick={handleGoBack}
-            className="flex items-center gap-2 px-6 py-3 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition-colors duration-200 shadow-md hover:shadow-lg"
+            className="flex items-center gap-2 px-6 py-3 bg-gray-600 text-gray-900 dark:text-white rounded-lg hover:bg-gray-700 transition-colors duration-200 shadow-md hover:shadow-lg"
           >
             <ArrowLeft size={20} />
             Kembali
@@ -50,7 +50,7 @@ export default function NotFoundPage() {
           
           <button
             onClick={handleGoHome}
-            className="flex items-center gap-2 px-6 py-3 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors duration-200 shadow-md hover:shadow-lg"
+            className="flex items-center gap-2 px-6 py-3 bg-indigo-600 text-gray-900 dark:text-white rounded-lg hover:bg-indigo-700 transition-colors duration-200 shadow-md hover:shadow-lg"
           >
             <Home size={20} />
             Beranda

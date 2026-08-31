@@ -31,7 +31,7 @@ const ToggleButton = ({ onClick, isShowingMore }) => (
     className="
       px-3 py-1.5
       text-slate-300 
-      hover:text-white 
+      hover:text-gray-900 dark:text-white 
       text-sm 
       font-medium 
       transition-all 
@@ -151,7 +151,7 @@ export default function FullWidthTabs() {
 
   // Sisa dari komponen (return statement) tidak ada perubahan
   return (
-    <div className="md:px-[10%] px-[5%] w-full sm:mt-0 mt-[3rem] bg-[#030014] overflow-hidden" id="Portofolio">
+    <div className="md:px-[10%] px-[5%] w-full sm:mt-0 mt-[3rem] bg-white dark:bg-[#030014] overflow-hidden" id="Portofolio">
       {/* Header section - unchanged */}
       <div className="text-center pb-10" data-aos="fade-up" data-aos-duration="1000">
         <h2 className="inline-block text-3xl md:text-5xl font-bold text-center mx-auto text-transparent bg-clip-text bg-gradient-to-r from-[#6366f1] to-[#a855f7]">
@@ -165,7 +165,7 @@ export default function FullWidthTabs() {
             Portfolio Showcase
           </span>
         </h2>
-        <p className="text-slate-400 max-w-2xl mx-auto text-sm md:text-base mt-2">
+        <p className="text-slate-700 dark:text-slate-400 max-w-2xl mx-auto text-sm md:text-base mt-2">
           Explore my journey through projects and technical expertise. 
           Each section represents a milestone in my continuous learning path.
         </p>
