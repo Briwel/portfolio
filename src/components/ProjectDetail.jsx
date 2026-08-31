@@ -141,39 +141,70 @@ const ProjectDetails = () => {
   const { slug } = useParams();
   const navigate = useNavigate();
   const [project, setProject] = useState(null);
-  const [isImageLoaded, setIsImageLoaded] = useState(false);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     window.scrollTo(0, 0);
-    const storedProjects = JSON.parse(localStorage.getItem("projects")) || [];
-    // Chercher le projet basé sur le slug généré à partir du Titre
-    const selectedProject = storedProjects.find(
-      (p) => toSlug(p.Title) === slug,
-    );
+    
+    // Simulate loading for 3 seconds as requested
+    const timer = setTimeout(() => {
+      const storedProjects = JSON.parse(localStorage.getItem("projects")) || [];
+      // Fallback to staticProjects if not in localStorage, assuming it's available or we mock it
+      const staticProjects = [
+        {
+          id: 1,
+          Title: "Plateforme de Partitions (Chœur Hangbé)",
+          Description: "Application web pour musiciens avec lecteur audio, filtres SATB et achat sécurisé.",
+          Link: "https://choeur-hangbe.ai.studio/",
+          Img: "/hangbe.jpg"
+        }
+      ];
+      
+      const projectsToSearch = storedProjects.length > 0 ? storedProjects : staticProjects;
+      
+      const selectedProject = projectsToSearch.find(
+        (p) => toSlug(p.Title) === slug,
+      );
 
-    if (selectedProject) {
-      const enhancedProject = {
-        ...selectedProject,
-        Features: selectedProject.Features || [],
-        TechStack: selectedProject.TechStack || [],
-        Github: selectedProject.Github || "https://github.com/Briwel",
-      };
-      setProject(enhancedProject);
-    }
+      if (selectedProject) {
+        setProject({
+          ...selectedProject,
+          Features: selectedProject.Features || [
+            "Paiement 100% automatisé : 0 intervention manuelle.",
+            "Multi-opérateurs : Support de MTN MoMo, Moov, Celtiis et Cartes Bancaires.",
+            "Console d'administration complète avec suivi en temps réel."
+          ],
+          TechStack: selectedProject.TechStack || ['React 18', 'Node.js', 'Firestore', 'FedaPay', 'Resend'],
+          Github: selectedProject.Github || "https://github.com/Briwel",
+        });
+      }
+      setLoading(false);
+    }, 3000);
+
+    return () => clearTimeout(timer);
   }, [slug]);
 
-  if (!project) {
+  if (loading) {
     return (
-      <div className="min-h-screen bg-[#030014] flex items-center justify-center">
+      <div className="min-h-screen bg-white dark:bg-[#030014] flex items-center justify-center">
         <div className="text-center space-y-6 animate-fadeIn">
           <div className="w-16 h-16 md:w-24 md:h-24 mx-auto border-4 border-blue-500/30 border-t-blue-500 rounded-full animate-spin" />
           <h2 className="text-xl md:text-3xl font-bold text-gray-900 dark:text-white">
-            Loading Project...
+            Chargement des détails...
           </h2>
         </div>
       </div>
     );
   }
+
+  if (!project) {
+    return (
+      <div className="min-h-screen bg-white dark:bg-[#030014] flex items-center justify-center">
+        <div className="text-center text-gray-900 dark:text-white">Projet introuvable.</div>
+      </div>
+    );
+  }
+
 
   const projectUrl = `https://briweldodaho.com/project/${toSlug(project.Title)}`;
 
@@ -272,7 +303,7 @@ const ProjectDetails = () => {
                         <CaseStudySection title="🎯 Métriques & Impact" icon={Target}>
                           <ul className="list-disc pl-5 space-y-2">
                             <li><strong>Paiement 100% automatisé :</strong> 0 intervention manuelle.</li>
-                            <li><strong>Multi-opérateurs :</strong> MTN MoMo, Moov, Celtiis, Cartes via FedaPay.</li>
+                            <li><strong>Multi-opérateurs :</strong> MTN MoMo, Moov, Celtiis.</li>
                             <li><strong>Console Super Admin :</strong> Alertes transaction en &lt; 3s.</li>
                           </ul>
                         </CaseStudySection>
@@ -361,9 +392,9 @@ const ProjectDetails = () => {
                   <div className="absolute inset-0 border-2 border-white/0 group-hover:border-white/10 transition-colors duration-300 rounded-2xl" />
                 </div>
 
-                <div className="bg-white/[0.02] backdrop-blur-xl rounded-2xl p-8 border border-white/10 space-y-6 hover:border-white/20 transition-colors duration-300 group">
+                <div className="bg-white/[0.02] backdrop-blur-xl rounded-2xl p-8 border border-white/10 space-y-6 transition-colors duration-300">
                   <h3 className="text-xl font-semibold text-gray-900 dark:text-white/90 flex items-center gap-3">
-                    <Star className="w-5 h-5 text-yellow-400 group-hover:rotate-[20deg] transition-transform duration-300" />
+                    <Star className="w-5 h-5 text-yellow-400" />
                     Key Features
                   </h3>
                   {project.Features.length > 0 ? (
