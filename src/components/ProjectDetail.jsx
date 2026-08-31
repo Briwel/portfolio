@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Helmet } from "react-helmet-async";
 import { useParams, useNavigate } from "react-router-dom";
+import { motion } from "framer-motion";
 import {
   ArrowLeft,
   ExternalLink,
@@ -14,9 +15,27 @@ import {
   Package,
   Cpu,
   Code,
+  Target,
+  Zap,
 } from "lucide-react";
 import Swal from "sweetalert2";
 import { toSlug } from "../utils/slug";
+
+const CaseStudySection = ({ title, children, icon: Icon }) => (
+  <motion.div 
+    initial={{ opacity: 0, y: 20 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    viewport={{ once: true }}
+    className="bg-gray-100 dark:bg-white/5 border border-gray-200 dark:border-white/10 rounded-2xl p-6 backdrop-blur-xl"
+  >
+    <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4 flex items-center gap-2">
+      <Icon className="text-[#6366f1]" /> {title}
+    </h3>
+    <div className="text-gray-700 dark:text-gray-300 space-y-3 leading-relaxed">
+      {children}
+    </div>
+  </motion.div>
+);
 
 const TECH_ICONS = {
   React: Globe,
@@ -239,9 +258,47 @@ const ProjectDetails = () => {
                 </div>
 
                 <div className="prose prose-invert max-w-none">
-                  <p className="text-base md:text-lg text-gray-300/90 leading-relaxed">
-                    {project.Description}
-                  </p>
+                  {project.Title === "Plateforme de Partitions (Chœur Hangbé)" ? (
+                    <motion.div 
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      className="space-y-6"
+                    >
+                      <p className="text-gray-700 dark:text-gray-300 text-lg leading-relaxed">
+                        {project.Description}
+                      </p>
+                      
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <CaseStudySection title="🎯 Métriques & Impact" icon={Target}>
+                          <ul className="list-disc pl-5 space-y-2">
+                            <li><strong>Paiement 100% automatisé :</strong> 0 intervention manuelle.</li>
+                            <li><strong>Multi-opérateurs :</strong> MTN MoMo, Moov, Celtiis, Cartes via FedaPay.</li>
+                            <li><strong>Console Super Admin :</strong> Alertes transaction en &lt; 3s.</li>
+                          </ul>
+                        </CaseStudySection>
+                        
+                        <CaseStudySection title="🛠️ Architecture Technique" icon={Code}>
+                          <div className="flex flex-wrap gap-2">
+                            {['React 18', 'Node.js', 'Firestore', 'FedaPay', 'Resend'].map(tech => (
+                              <span key={tech} className="px-3 py-1 rounded-full bg-indigo-500/20 text-indigo-700 dark:text-indigo-300 text-sm font-medium">{tech}</span>
+                            ))}
+                          </div>
+                        </CaseStudySection>
+                      </div>
+
+                      <CaseStudySection title="💻 Défis & Solutions" icon={Zap}>
+                        <div className="space-y-4">
+                          <p><strong>Sécurité :</strong> Flux de paiement figé côté serveur, PDF verrouillé jusqu'à confirmation API.</p>
+                          <p><strong>Notifications :</strong> Service mail asynchrone transactionnel.</p>
+                          <p><strong>RBAC :</strong> Sécurité Firestore granulaire (admin vs musicien).</p>
+                        </div>
+                      </CaseStudySection>
+                    </motion.div>
+                  ) : (
+                    <p className="text-base md:text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
+                      {project.Description}
+                    </p>
+                  )}
                 </div>
 
                 <ProjectStats project={project} />
