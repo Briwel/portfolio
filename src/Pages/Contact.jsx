@@ -220,7 +220,7 @@ const ContactPage = () => {
             </form>
 
             <div className="mt-6">
-                <a href="/Biwel_DODAHO.pdf" download className="w-full flex items-center justify-center gap-2 py-3 bg-white/10 rounded-xl text-gray-900 dark:text-white font-semibold transition-all hover:bg-white/20">
+                <a href="/Briwel_DODAHO.pdf" download className="w-full flex items-center justify-center gap-2 py-3 bg-white/10 rounded-xl text-gray-900 dark:text-white font-semibold transition-all hover:bg-white/20">
                     <FileText className="w-5 h-5" /> Télécharger mon CV
                 </a>
             </div>
