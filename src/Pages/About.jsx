@@ -217,7 +217,7 @@ const AboutPage = () => {
 
                {/* Quote Section */}
       <div 
-        className="relative bg-gray-100 dark:bg-gradient-to-br from-[#6366f1]/5 via-transparent to-[#a855f7]/5 border border-gray-200 dark:border-[#6366f1]/30 rounded-2xl p-4 my-6 backdrop-blur-md shadow-2xl overflow-hidden"
+        className="relative bg-gray-100 dark:bg-transparent border border-gray-200 dark:border-[#6366f1]/30 rounded-2xl p-4 my-6 overflow-hidden"
         data-aos="fade-up"
         data-aos-duration="1700"
       >
