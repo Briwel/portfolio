@@ -43,7 +43,7 @@ const ProfileImage = memo(() => (
       </div>
 
       <img 
-        src="/photo.jpg" 
+        src="/Photo.jpg" 
         alt="Briwel DODAHO" 
         className="relative z-10 w-64 h-64 rounded-full object-cover border-4 border-white/10 dark:border-white/10 group-hover:scale-105 transition-transform duration-300"
       />
